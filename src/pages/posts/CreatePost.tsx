@@ -9,7 +9,7 @@ const CreatePost = () => {
   const handleSubmit = async (e: FormEvent) => {
     //prevent reload
     e.preventDefault();
-    console.log(title, date);
+    // console.log(title, date);
 
     try {
       await axios.post("http://localhost:3001/api/v1/posts", {

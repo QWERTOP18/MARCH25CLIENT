@@ -20,3 +20,22 @@ railsでrack-corsの設定をする。
 
 railsのvalidationを強くしてしまって、お手軽にnewできなくなってしまった。
 title,dateだけ入れたらnewして、pageを作った方がUXは高くなりそう
+
+### form
+
+いまだにformについて深く理解していない気がする
+`<label>` を `<input>` に関連付けると、ラベルをクリックするだけで入力欄がフォーカスされる。
+スクリーンリーダー でラベルが読み上げられるので、視覚障がいのあるユーザーにも優しい。
+
+```ts
+const [date, setDate] = useState("");
+
+return (
+  <input
+    type="date"
+    name="date" //useStateを使用する場合はnameはいらない。
+    value={date}
+    onChange={(e) => setDate(e.target.value)}
+  />
+);
+```
